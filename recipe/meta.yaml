@@ -1,6 +1,6 @@
 {% set name = "jupyter_sphinx" %}
-{% set version = "0.1.0" %}
-{% set sha256 = "3103d4e905b63f6f94b991824e47130ab9c0bdc94fe427fa8090a1e646498787" %}
+{% set version = "0.1.1" %}
+{% set sha256 = "1668a052f4c5dddc3241bd13fef61ce716651dcf06663873a95d47ea5040e712" %}
 
 package:
   name: {{ name|lower }}
