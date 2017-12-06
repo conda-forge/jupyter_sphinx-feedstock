@@ -1,6 +1,6 @@
 {% set name = "jupyter_sphinx" %}
-{% set version = "0.1.1" %}
-{% set sha256 = "1668a052f4c5dddc3241bd13fef61ce716651dcf06663873a95d47ea5040e712" %}
+{% set version = "0.1.2" %}
+{% set sha256 = "9eeefcfb7148f11f9c16ec6b6b1931a86e05d2d0897b719f8244bdc7efb5cae2" %}
 
 package:
   name: {{ name|lower }}
@@ -22,7 +22,7 @@ requirements:
   run:
     - python
     - sphinx
-    - ipywidgets >=6.0.0
+    - ipywidgets >=7.0.0
 
 test:
   imports:
