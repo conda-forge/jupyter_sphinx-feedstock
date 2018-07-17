@@ -1,6 +1,6 @@
 {% set name = "jupyter_sphinx" %}
-{% set version = "0.1.2" %}
-{% set sha256 = "9eeefcfb7148f11f9c16ec6b6b1931a86e05d2d0897b719f8244bdc7efb5cae2" %}
+{% set version = "0.1.3" %}
+{% set sha256 = "c489ffdc576f01b7c9f44dfb17ad0821426ddb84d068c65aa4119d56420dc287" %}
 
 package:
   name: {{ name|lower }}
@@ -13,7 +13,7 @@ source:
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script: python -m pip install --no-deps --ignore-installed .
 
 requirements:
@@ -34,7 +34,7 @@ about:
   home: https://github.com/jupyter-widgets/jupyter-sphinx
   license: BSD 3-Clause
   license_family: BSD
-  # license_file: LICENSE
+  license_file: LICENSE
   summary: 'Jupyter Sphinx extensions enable Jupyter-specific features in Sphinx.'
   dev_url: https://github.com/jupyter-widgets/jupyter-sphinx
 
