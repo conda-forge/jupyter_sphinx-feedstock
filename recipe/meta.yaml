@@ -12,31 +12,33 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  noarch: python
   number: 0
+  skip: true  # [py<35]
   script: python -m pip install --no-deps --ignore-installed .
 
 requirements:
-  host:
+  build:
     - pip
     - python
-    - setuptools
   run:
     - python
-    - sphinx
+    - sphinx >=0.6
     - ipywidgets >=7.0.0
+    - IPython
+    - nbconvert >=5.5
+    - nbformat
 
 test:
   imports:
     - jupyter_sphinx
 
 about:
-  home: https://github.com/jupyter-widgets/jupyter-sphinx
+  home: https://github.com/jupyter/jupyter-sphinx
   license: BSD 3-Clause
   license_family: BSD
   license_file: LICENSE
-  summary: 'Jupyter Sphinx extensions enable Jupyter-specific features in Sphinx.'
-  dev_url: https://github.com/jupyter-widgets/jupyter-sphinx
+  summary: 'Include Jupyter outputs in Sphinx documentation.'
+  dev_url: https://github.com/jupyter/jupyter-sphinx
 
 extra:
   recipe-maintainers:
