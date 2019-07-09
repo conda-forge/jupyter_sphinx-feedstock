@@ -1,6 +1,6 @@
 {% set name = "jupyter_sphinx" %}
-{% set version = "0.1.4" %}
-{% set sha256 = "03f22230f71de202c1a5fe45ab973877a42260e4a2cd901529dae0bdef9dc908" %}
+{% set version = "0.2.0" %}
+{% set sha256 = "4ff879a722e5403779d5f33be99bf9b0d37d8f9fd2a339efa786e0ba9ded744b" %}
 
 package:
   name: {{ name|lower }}
@@ -12,32 +12,35 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  noarch: python
   number: 0
+  skip: true  # [py<35]
   script: python -m pip install --no-deps --ignore-installed .
 
 requirements:
-  host:
+  build:
     - pip
     - python
-    - setuptools
   run:
     - python
-    - sphinx
+    - sphinx >=0.6
     - ipywidgets >=7.0.0
+    - IPython
+    - nbconvert >=5.5
+    - nbformat
 
 test:
   imports:
     - jupyter_sphinx
 
 about:
-  home: https://github.com/jupyter-widgets/jupyter-sphinx
+  home: https://github.com/jupyter/jupyter-sphinx
   license: BSD 3-Clause
   license_family: BSD
   license_file: LICENSE
-  summary: 'Jupyter Sphinx extensions enable Jupyter-specific features in Sphinx.'
-  dev_url: https://github.com/jupyter-widgets/jupyter-sphinx
+  summary: 'Include Jupyter outputs in Sphinx documentation.'
+  dev_url: https://github.com/jupyter/jupyter-sphinx
 
 extra:
   recipe-maintainers:
     - SylvainCorlay
+    - akhmerov
