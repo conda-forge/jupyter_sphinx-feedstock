@@ -1,6 +1,6 @@
 {% set name = "jupyter_sphinx" %}
-{% set version = "0.2.0" %}
-{% set sha256 = "4ff879a722e5403779d5f33be99bf9b0d37d8f9fd2a339efa786e0ba9ded744b" %}
+{% set version = "0.2.1" %}
+{% set sha256 = "c6f625f49a477b0938645f3dd53da7165a217a917114b651e614a1b9eca046b1" %}
 
 package:
   name: {{ name|lower }}
@@ -22,7 +22,7 @@ requirements:
     - python
   run:
     - python
-    - sphinx >=0.6
+    - sphinx >=1.8
     - ipywidgets >=7.0.0
     - IPython
     - nbconvert >=5.5
@@ -44,3 +44,4 @@ extra:
   recipe-maintainers:
     - SylvainCorlay
     - akhmerov
+    - jbweston
