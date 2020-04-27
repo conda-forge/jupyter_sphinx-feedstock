@@ -34,7 +34,7 @@ test:
 
 about:
   home: https://github.com/jupyter/jupyter-sphinx
-  license: BSD 3-Clause
+  license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE
   summary: 'Include Jupyter outputs in Sphinx documentation.'
