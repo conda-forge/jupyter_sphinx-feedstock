@@ -6,27 +6,12 @@ package:
   name: {{ name|lower }}
   version: {{ version }}
 
-source:
-  fn: {{ name }}-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: {{ sha256 }}
-
 build:
-  number: 0
-  skip: true  # [py<36]
-  script: {{ PYTHON }} -m pip install . --no-deps -vv
+  number: 1
 
 requirements:
-  build:
-    - pip
-    - python
   run:
-    - python
-    - sphinx >=2.0
-    - ipywidgets >=7.0.0
-    - IPython
-    - nbconvert >=5.5
-    - nbformat
+    - jupyter-sphinx =={{ version }}
 
 test:
   imports:
