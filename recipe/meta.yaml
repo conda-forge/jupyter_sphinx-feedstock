@@ -1,6 +1,6 @@
 {% set name = "jupyter_sphinx" %}
-{% set version = "0.2.4" %}
-{% set sha256 = "b5ba1efdd1488b385de0068036a665932ed93998e40ce3a342c60f0926781fd9" %}
+{% set version = "0.3.1" %}
+{% set sha256 = "c4caf8bbf2be6edfe0319aa76127d17fdbe6927c8189cda2d6ac59c01f38404b" %}
 
 package:
   name: {{ name|lower }}
@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 0
   skip: true  # [py<35]
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
